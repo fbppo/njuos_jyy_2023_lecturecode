@@ -4,13 +4,13 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import os
 
-# set chrome options
+# 设置 Chrome 选项
 def driver_init():
     chrome_options = Options()
-    chrome_options.add_argument("--headless")  # headless mode
-    chrome_options.binary_location = ''
-    # set chromdirver path
-    service = Service('')
+    chrome_options.add_argument("--headless")  # 无头模式
+    chrome_options.binary_location = '/home/anon/Download/edge/chrome-linux64/chrome'
+    # 设置 ChromeDriver 路径
+    service = Service('/home/anon/Download/edge/chromedriver-linux64/chromedriver')
     driver = webdriver.Chrome(service=service, options=chrome_options)
     return driver
     
